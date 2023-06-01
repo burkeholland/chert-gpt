@@ -1,0 +1,74 @@
+/* Create a CSS layout for a main element and a footer element. The footer element should be sticky at the bottom. */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    margin-bottom: 2rem; /* adjust this value to match the height of your footer */
+    z-index: 1;
+}
+
+footer {
+    color: #fff;
+    padding-bottom: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2rem; /* adjust this value to match the height of your footer */
+    z-index: 0;
+}
+
+.new-message {
+    position: relative;
+    max-width: 500px;
+    /* add a light grey border */
+    border: 1px solid #ccc;
+    /* a subtle drop shadow */
+    box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+    padding: 5px;
+    border-radius: 10px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#newMessage {
+    margin: auto;
+    /* dont allow resize */
+    resize: none;
+    /* full width */
+    width: 100%;
+    /* no border */
+    border: none;
+    box-sizing: border-box;
+    /* center the element */
+    display: block;
+}
+
+#newMessage:focus {
+    outline: none;
+}
+
+.message {
+    height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    /* bottom border dark grey */
+    border-bottom: 1px solid #ccc;
+    /* center the text in the div vertically */
+    display: flex;
+    align-items: center;
+}
+
+.message.assistant {
+    /* background color of llight blue */
+    background-color: #e6e6e6;
+}
